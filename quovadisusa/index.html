@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>BOOMERBERG</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 10px;
+    }
+    .logo {
+      display: inline-block;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      padding: 6px 20px;
+      margin: 0 auto 20px auto;
+    }
+    .logo h1 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.8em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    nav.nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .nav-buttons a {
+      position: relative;
+      display: inline-block;
+      border-left: 2px solid #000;
+      border-bottom: 2px solid #000;
+      padding: 6px 15px;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out;
+    }
+    .nav-buttons a:hover {
+      background-color: #000;
+      color: #fff;
+    }
+    .nav-buttons a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+    }
+    h2 {
+      font-size: 1.3em;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .charts-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .chart-container {
+      flex: 1 1 48%;
+    }
+    iframe {
+      width: 100% !important;
+      border: none;
+    }
+    @media (max-width: 800px) {
+      .chart-container {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <h1>BOOMERBERG</h1>
+    </div>
+
+    <nav class="nav-buttons">
+      <a href="/breadth/index.html">Breadth</a>
+      <a href="/sentiment/index.html">Sentiment</a>
+      <a href="/data/quovadisusa" class="active">QuoVadisUSA</a>
+      <a href="/quant/index.html">Quant</a>
+    </nav>
+
+    <h2>Quo Vadis USA?</h2>
+    <p>Current Macroeconomic Analysis/ Snapshot of the United States</p>
+    <!-- Erste Reihe -->
+    <div class="charts-row">
+      <div class="chart-container">
+        <iframe title="Total Construction Spending" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-tSPGe" 
+                src="https://datawrapper.dwcdn.net/tSPGe/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+      <div class="chart-container">
+        <iframe title="Unemployment Rate in Percent" 
+                aria-label="Interactive line chart" 
+                id="datawrapper-chart-uuVYL" 
+                src="https://datawrapper.dwcdn.net/uuVYL/2/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+    </div>
+
+    <!-- Zweite Reihe -->
+    <div class="charts-row">
+      <div class="chart-container">
+        <iframe title="Consumer Price Index for All Urban Consumers: All Items in U.S. City Average" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-bZnoB" 
+                src="https://datawrapper.dwcdn.net/bZnoB/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+      <div class="chart-container">
+        <iframe title="Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-Tb0Q4" 
+                src="https://datawrapper.dwcdn.net/Tb0Q4/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+    </div>
+
+    <!-- Dritte Reihe -->
+    <div class="charts-row">
+      <div class="chart-container">
+        <iframe title="Nonfarm Business Sector: Labor Productivity (Output per Hour) for All Workers (Index)" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-Z1V3e" 
+                src="https://datawrapper.dwcdn.net/Z1V3e/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+      <div class="chart-container">
+        <iframe title="Real Disposable Personal Income & Real Personal Consumption Expenditures" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-Jperw" 
+                src="https://datawrapper.dwcdn.net/Jperw/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+    </div>
+
+    <!-- Vierte Reihe -->
+    <div class="charts-row">
+      <div class="chart-container">
+        <iframe title="Real Disposable Personal Income & Real Personal Consumption Expenditures - Change" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-gTcZW" 
+                src="https://datawrapper.dwcdn.net/gTcZW/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+      <div class="chart-container">
+        <iframe title="New Privately-Owned Housing" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-8j8e1" 
+                src="https://datawrapper.dwcdn.net/8j8e1/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+    </div>
+
+    <!-- Fünfte Reihe: Sentiment + Business Confidence -->
+    <div class="charts-row">
+      <div class="chart-container">
+        <iframe title="University of Michigan: Consumer Sentiment" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-XSLkF" 
+                src="https://datawrapper.dwcdn.net/XSLkF/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+      <div class="chart-container">
+        <iframe title="Business Tendency Surveys (Manufacturing): Confidence Indicators: Composite Indicators: National Indicator for United States" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-exaCl" 
+                src="https://datawrapper.dwcdn.net/exaCl/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+    </div>
+    
+        <!-- Sechste Reihe: Economic Policy Uncertainty Index -->
+    <div class="charts-row">
+      <div class="chart-container" style="flex: 1 1 100%;">
+        <iframe title="Economic Policy Uncertainty Index" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-kHjT9" 
+                src="https://datawrapper.dwcdn.net/kHjT9/1/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500" 
+                data-external="1"></iframe>
+      </div>
+    </div>
+    
+    <!-- Abschnitt: Average Joe -->
+    <h2>Average Joe</h2>
+    <p>How is the economy doing for most Americans? Yes, the U.S. experienced solid real GDP growth after the Covid crisis (light blue line). Much, much better than Europe and, of course, Germany. But real wages have only been rising again since 2022 – and very slowly. Labor force participation (dark blue line) has never recovered to its pre-crisis level, and the share of labor income in total income has declined throughout the Biden era. In the end, he was not the president of Main Street. What comes next under Trump?</p>
+
+    <div class="charts-row">Current Macroeconomic Analysis of the United States
+      <div class="chart-container" style="flex: 1 1 100%;">
+        <iframe title="How is the economy doing for most Americans?" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-W3jC0" 
+                src="https://datawrapper.dwcdn.net/W3jC0/1/" 
+                scrolling="no" Current Macroeconomic Analysis of the United States
+                frameborder="0" Current Macroeconomic Analysis of the United States
+                height="470" 
+                data-external="1"></iframe>
+      </div>
+    </div>
+
+  </div><!-- .container -->
+
+  <script type="text/javascript">
+    !function() {
+      "use strict";
+      window.addEventListener("message", function(a) {
+        if (void 0 !== a.data["datawrapper-height"]) {
+          var e = document.querySelectorAll("iframe");
+          for (var t in a.data["datawrapper-height"])
+            for (var r, i = 0; r = e[i]; i++)
+              if (r.contentWindow === a.source) {
+                var d = a.data["datawrapper-height"][t] + "px";
+                r.style.height = d;
+              }
+        }
+      })
+    }();
+  </script>
+
+</body>
+</html>
