@@ -18,18 +18,23 @@
       padding: 20px 10px;
     }
     .logo {
-      display: inline-block;
+      display: block;
       border-left: 2px solid #000;
       border-bottom: 2px solid #000;
       padding: 6px 20px;
       margin: 0 auto 20px auto;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo:hover {
+      background-color: #f5f5f5; /* optional: Hover-Effekt */
     }
     .logo h1 {
       margin: 0;
       font-weight: bold;
       font-size: 1.8em;
       text-transform: uppercase;
-      text-align: center;
     }
     nav.nav-buttons {
       display: flex;
@@ -93,9 +98,9 @@
 <body>
 
   <div class="container">
-    <div class="logo">
+    <a href="/" class="logo">
       <h1>BOOMERBERG</h1>
-    </div>
+    </a>
 
     <nav class="nav-buttons">
       <a href="/" class="active">Home</a>
@@ -104,7 +109,7 @@
       <a href="/quovadisusa">QuoVadisUSA</a>
       <a href="/quant">Quant</a>
     </nav>
-
+  </div>
 
   <script type="text/javascript">
     !function() {
