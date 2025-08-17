@@ -16,10 +16,12 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 20px 10px;
-      text-align: center; /* zentriert die Inline-Elemente, z.B. Logo */
+    }
+    .logo-wrapper {
+      text-align: center; /* Logo bleibt zentriert */
     }
     .logo {
-      display: inline-block; /* nur so breit wie der Inhalt */
+      display: inline-block;
       border-left: 2px solid #000;
       border-bottom: 2px solid #000;
       padding: 6px 20px;
@@ -28,7 +30,7 @@
       color: inherit;
     }
     .logo:hover {
-      background-color: transparent; /* kein grauer Hover-Hintergrund */
+      background-color: transparent; /* kein grauer Hover-Effekt */
     }
     .logo h1 {
       margin: 0;
@@ -70,6 +72,9 @@
       height: 2px;
       background-color: #000;
     }
+    h2, p {
+      text-align: left; /* Überschrift und Text linksbündig */
+    }
     h2 {
       font-size: 1.3em;
       margin-top: 40px;
@@ -99,9 +104,11 @@
 <body>
 
   <div class="container">
-    <a href="/" class="logo">
-      <h1>BOOMERBERG</h1>
-    </a>
+    <div class="logo-wrapper">
+      <a href="/" class="logo">
+        <h1>BOOMERBERG</h1>
+      </a>
+    </div>
 
     <nav class="nav-buttons">
       <a href="/">Home</a>
@@ -173,7 +180,7 @@
     
     <!-- Abschnitt: Average Joe -->
     <h2>Average Joe</h2>
-    <p>How is the economy doing for most Americans? …</p>
+    <p>How is the economy doing for most Americans? Yes, the U.S. experienced solid real GDP growth after the Covid crisis (light blue line). Much, much better than Europe and, of course, Germany. But real wages have only been rising again since 2022 – and very slowly. Labor force participation (dark blue line) has never recovered to its pre-crisis level, and the share of labor income in total income has declined throughout the Biden era. In the end, he was not the president of Main Street. What comes next under Trump?</p>
 
     <div class="charts-row">
       <div class="chart-container" style="flex: 1 1 100%;">
