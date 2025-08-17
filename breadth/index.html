@@ -16,30 +16,37 @@
       max-width: 1000px;
       margin: 0 auto;
       padding: 20px 10px;
-      text-align: left;
     }
+
+    /* Header mit Logo und Nav nebeneinander */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap; /* sorgt dafür, dass es bei kleineren Screens umbrechen darf */
+    }
+
     .logo {
       display: inline-block;
       border-left: 2px solid #000;
       border-bottom: 2px solid #000;
-      padding: 6px 20px;
-      margin: 0 auto 20px auto;
+      padding: 6px 15px; /* gleich wie die Navigation */
       text-decoration: none;
       color: inherit;
     }
     .logo h1 {
       margin: 0;
       font-weight: bold;
-      font-size: 1.8em;
+      font-size: 1em; /* gleiche Größe wie Nav-Links */
       text-transform: uppercase;
-      text-align: left;
     }
+
     nav.nav-buttons {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 30px;
     }
     .nav-buttons a {
       position: relative;
@@ -67,6 +74,7 @@
       height: 2px;
       background-color: #000;
     }
+
     h2 {
       font-size: 1.3em;
       margin-top: 40px;
@@ -80,13 +88,23 @@
       margin-bottom: 30px;
     }
     .chart-container {
-      flex: 1 1 100%;
+      flex: 1 1 48%;
     }
     iframe {
       width: 100% !important;
       border: none;
     }
+
+    /* Responsive Anpassungen */
     @media (max-width: 800px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav.nav-buttons {
+        justify-content: center;
+        margin-top: 15px;
+      }
       .chart-container {
         flex: 1 1 100%;
       }
@@ -95,18 +113,20 @@
 </head>
 <body>
 
-  <div class="container">
-    <a href="/" class="logo">
-      <h1>BOOMERBERG</h1>
-    </a>
+<div class="container">
+    <div class="header">
+      <a href="/" class="logo">
+        <h1>BOOMERBERG</h1>
+      </a>
 
-    <nav class="nav-buttons">
-      <a href="/">Home</a>
-      <a href="/breadth" class="active">Breadth</a>
-      <a href="/sentiment">Sentiment</a>
-      <a href="/quovadisusa">Quo Vadis USA</a>
-      <a href="/quant">Quant</a>
-    </nav>
+      <nav class="nav-buttons">
+        <a href="/" class="active">Home</a>
+        <a href="/breadth">Breadth</a>
+        <a href="/sentiment">Sentiment</a>
+        <a href="/quovadisusa">Quo Vadis USA</a>
+        <a href="/quant">Quant</a>
+      </nav>
+    </div>
 
     <div class="charts-row">
       <div class="chart-container">
