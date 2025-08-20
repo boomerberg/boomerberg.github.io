@@ -18,27 +18,26 @@
       padding: 20px 10px;
     }
 
-    /* Header mit Logo und Nav nebeneinander */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 30px;
-      flex-wrap: wrap; /* sorgt dafür, dass es bei kleineren Screens umbrechen darf */
+      flex-wrap: wrap;
     }
 
     .logo {
       display: inline-block;
       border-left: 2px solid #000;
       border-bottom: 2px solid #000;
-      padding: 6px 15px; /* gleich wie die Navigation */
+      padding: 6px 15px;
       text-decoration: none;
       color: inherit;
     }
     .logo h1 {
       margin: 0;
       font-weight: bold;
-      font-size: 1em; /* gleiche Größe wie Nav-Links */
+      font-size: 1em;
       text-transform: uppercase;
     }
 
@@ -95,7 +94,6 @@
       border: none;
     }
 
-    /* Responsive Anpassungen */
     @media (max-width: 800px) {
       .header {
         flex-direction: column;
@@ -133,6 +131,19 @@
       Current Macroeconomic Snapshot of the United States. Inspired by Rüdiger Bachmann’s slides 
       <a href="https://www.eucken.de/app/uploads/Bachmann_Praesentation.pdf" target="_blank">Slides (PDF)</a>
     </p>
+
+    <!-- Eingefügtes iFrame über volle Breite -->
+    <div class="charts-row">
+      <div class="chart-container" style="flex: 1 1 100%;">
+        <iframe title="How the markets have performed since Donald Trump’s election win" 
+                aria-label="Line chart" 
+                id="datawrapper-chart-teqkJ" 
+                src="https://datawrapper.dwcdn.net/teqkJ/2/" 
+                scrolling="no" 
+                frameborder="0" 
+                height="500"></iframe>
+      </div>
+    </div>
 
     <!-- Erste Reihe -->
     <div class="charts-row">
@@ -203,7 +214,7 @@
       </div>
     </div>
 
-      <div class="charts-row">
+    <div class="charts-row">
       <div class="chart-container" style="flex: 1 1 100%;">
         <iframe title="Cumulative Change in prices" aria-label="Line chart" id="datawrapper-chart-2jur4" src="https://datawrapper.dwcdn.net/2jur4/1/" scrolling="no" frameborder="0"  height="500"></iframe>
       </div>
@@ -215,7 +226,7 @@
     !function() {
       "use strict";
       window.addEventListener("message", function(a) {
-        if (void 0 !== a.data["datawrapper-height"]) {style="width: 0; min-width: 100% !important; border: none;
+        if (void 0 !== a.data["datawrapper-height"]) {
           var e = document.querySelectorAll("iframe");
           for (var t in a.data["datawrapper-height"])
             for (var r, i = 0; r = e[i]; i++)
